@@ -1,8 +1,6 @@
 import { Component } from "react";
 import { Button, Container, Dropdown, Form, Row, Spinner } from "react-bootstrap";
-import NowInTendency from "./NowInTendecy";
-import WatchAgain from "./WatchAgain";
-import NewRelease from "./NewRelease";
+import Galleries from "./Galleries";
 
 class HomePage extends Component {
   state = {
@@ -47,28 +45,28 @@ class HomePage extends Component {
           </div>
 
           <div>
-            <h2 className="text-white mb-5">Ora in tendenza</h2>
+            <h2 className="text-white mb-5">Hunger Games</h2>
 
             {this.state.firstGallery ? (
-              <NowInTendency film={this.state.firstGallery} />
+              <Galleries film={this.state.firstGallery} />
             ) : (
               <Spinner className="text-white mb-5" animation="border" role="status"></Spinner>
             )}
           </div>
           <div>
-            <h2 className="text-white mb-5">Guarda di nuovo</h2>
+            <h2 className="text-white mb-5">Fast & Furious</h2>
 
             {this.state.secondGallery ? (
-              <WatchAgain film={this.state.secondGallery} />
+              <Galleries film={this.state.secondGallery} />
             ) : (
               <Spinner className="text-white mb-5" animation="border" role="status"></Spinner>
             )}
           </div>
           <div>
-            <h2 className="text-white mb-5">Nuovi</h2>
+            <h2 className="text-white mb-5">The Chronicle of Narnia</h2>
 
             {this.state.thirdGallery ? (
-              <NewRelease film={this.state.thirdGallery} />
+              <Galleries film={this.state.thirdGallery} />
             ) : (
               <Spinner className="text-white mb-5" animation="border" role="status"></Spinner>
             )}
