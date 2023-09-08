@@ -3,6 +3,7 @@ import HomePage from "./components/HomePage";
 import MyFooter from "./components/MyFooter";
 import TopBar from "./components/TopBar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-bootstrap-icons";
 
 function App() {
   return (

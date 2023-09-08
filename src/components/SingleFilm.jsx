@@ -4,8 +4,8 @@ class SingleFilm extends Component {
   render() {
     return (
       this.props.film && (
-        <div>
-          <img className=" img-fluid mb-3 " src={this.props.film.Poster} alt="Poster-Film" />
+        <div className="h-75">
+          <img className=" img-fluid h-100" src={this.props.film.Poster} alt="Poster-Film" />
         </div>
       )
     );

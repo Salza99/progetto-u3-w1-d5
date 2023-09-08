@@ -1,55 +1,56 @@
 import { Component } from "react";
+import { Col, Container, NavLink, Row } from "react-bootstrap";
+import { Facebook, Youtube, Twitter, Instagram } from "react-bootstrap-icons";
 
 class MyFooter extends Component {
   render() {
     return (
-      <footer className="container text-secondary">
+      <Container className="bg-dark">
         <div className="d-flex">
-          <i className="bi bi-facebook fs-4 me-4 mb-3"></i>
-          <i className="bi bi-instagram fs-4 me-4 mb-3"></i>
-
-          <i className="bi bi-x-lg fs-4 me-4 mb-3"></i>
-          <i className="bi bi-youtube fs-4 me-4 mb-3"></i>
+          <Facebook className="text-secondary me-3 mb-2 fs-3"></Facebook>
+          <Instagram className="text-secondary me-3 mb-2 fs-3"></Instagram>
+          <Twitter className="text-secondary me-3 mb-2 fs-3"></Twitter>
+          <Youtube className="text-secondary  mb-2 fs-3"></Youtube>
         </div>
-        <div className="row">
-          <div className="col-6 col-md-3">
-            <p>Audio and Subtitled</p>
+        <Row>
+          <Col xs={6} md={3} className="text-secondary">
+            <NavLink href="#">Audio and Subtitled</NavLink>
 
-            <p>Media Center</p>
+            <NavLink href="#">Media Center</NavLink>
 
-            <p>Privacy</p>
+            <NavLink href="#">Privacy</NavLink>
 
-            <p>Contact Us</p>
-          </div>
-          <div className="col-6 col-md-3">
-            <p>Audio Description</p>
+            <NavLink href="#">Contact Us</NavLink>
+          </Col>
+          <Col xs={6} md={3} className="text-secondary">
+            <NavLink href="#">Audio Description</NavLink>
 
-            <p>Investor Relations</p>
+            <NavLink href="#">Investor Relations</NavLink>
 
-            <p>Legal Notices</p>
-          </div>
-          <div className="col-6 col-md-3">
-            <p>Help Center</p>
+            <NavLink href="#">Legal Notices</NavLink>
+          </Col>
+          <Col xs={6} md={3} className="text-secondary">
+            <NavLink href="#">Help Center</NavLink>
 
-            <p>Jobs</p>
+            <NavLink href="#">Jobs</NavLink>
 
-            <p>Cookie Preferences</p>
-          </div>
-          <div className="col-6 col-md-3">
-            <p>Gift Cards</p>
+            <NavLink href="#">Cookie Preferences</NavLink>
+          </Col>
+          <Col xs={6} md={3} className="text-secondary">
+            <NavLink href="#">Gift Cards</NavLink>
 
-            <p>Terms of Use</p>
+            <NavLink href="#">Terms of Use</NavLink>
 
-            <p>Corporate Informations</p>
-          </div>
-        </div>
+            <NavLink href="#">Corporate Informations</NavLink>
+          </Col>
+        </Row>
         <div className="d-flex">
           <button type="button" className="btn btn-outline-secondary mb-3">
             Service Code
           </button>
         </div>
-        <address className="text-center">&copy 1997-2023 Netflix, Inc.</address>
-      </footer>
+        <address className="text-center text-secondary">&copy 1997-2023 Netflix, Inc.</address>
+      </Container>
     );
   }
 }

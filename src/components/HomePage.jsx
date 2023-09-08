@@ -39,24 +39,24 @@ class HomePage extends Component {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Commedia</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Dramma</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Documentari</Dropdown.Item>
+                <Dropdown.Item href="#">Commedia</Dropdown.Item>
+                <Dropdown.Item href="#">Dramma</Dropdown.Item>
+                <Dropdown.Item href="#">Documentari</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>
 
           <div>
-            <h2 className="text-white">Ora in tendenza</h2>
+            <h2 className="text-white mb-5">Ora in tendenza</h2>
 
             <NowInTendency film={this.state.firstGallery} />
           </div>
           <div>
-            <h2 className="text-white">Guarda di nuovo</h2>
+            <h2 className="text-white mb-5">Guarda di nuovo</h2>
             <WatchAgain film={this.state.secondGallery} />
           </div>
           <div>
-            <h2 className="text-white">Nuovi</h2>
+            <h2 className="text-white mb-5">Nuovi</h2>
             <NewRelease film={this.state.thirdGallery} />
           </div>
         </Container>
