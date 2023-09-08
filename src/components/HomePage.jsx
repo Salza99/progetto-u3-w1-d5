@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Button, Container, Dropdown, Form, Row } from "react-bootstrap";
+import { Button, Container, Dropdown, Form, Row, Spinner } from "react-bootstrap";
 import NowInTendency from "./NowInTendecy";
 import WatchAgain from "./WatchAgain";
 import NewRelease from "./NewRelease";
@@ -49,15 +49,29 @@ class HomePage extends Component {
           <div>
             <h2 className="text-white mb-5">Ora in tendenza</h2>
 
-            <NowInTendency film={this.state.firstGallery} />
+            {this.state.firstGallery ? (
+              <NowInTendency film={this.state.firstGallery} />
+            ) : (
+              <Spinner className="text-white mb-5" animation="border" role="status"></Spinner>
+            )}
           </div>
           <div>
             <h2 className="text-white mb-5">Guarda di nuovo</h2>
-            <WatchAgain film={this.state.secondGallery} />
+
+            {this.state.secondGallery ? (
+              <WatchAgain film={this.state.secondGallery} />
+            ) : (
+              <Spinner className="text-white mb-5" animation="border" role="status"></Spinner>
+            )}
           </div>
           <div>
             <h2 className="text-white mb-5">Nuovi</h2>
-            <NewRelease film={this.state.thirdGallery} />
+
+            {this.state.thirdGallery ? (
+              <NewRelease film={this.state.thirdGallery} />
+            ) : (
+              <Spinner className="text-white mb-5" animation="border" role="status"></Spinner>
+            )}
           </div>
         </Container>
       </div>
