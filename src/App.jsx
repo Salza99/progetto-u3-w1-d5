@@ -10,11 +10,11 @@ import ProfilePage from "./components/ProfilePage";
 function App() {
   return (
     <div className="bg-dark">
-      {/* <TopBar />
+      <TopBar />
       <HomePage />
-      <MyFooter /> */}
-      <ProfileNav />
-      <ProfilePage />
+      <MyFooter />
+      {/* <ProfileNav />
+      <ProfilePage /> */}
     </div>
   );
 }
